@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --main-text-color: white;
+    --black-text-color:black;
+    --home-header-bg-color:rgba(100, 90, 144, 0.55);
+    --lightest-blue-tone:#73c3f5;
+    --middle-blue-tone:#73c3f5;
+    --darkest-blue-tone:#0153d5;
+  }
+
+body{
+    background-color: #161718;
+}
+
+.header-background-overlay{
+    background-color:var(--home-header-bg-color);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    transition:2s;
+}
