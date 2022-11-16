@@ -15,8 +15,8 @@ type ToDos = {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos')
-  const todos: ToDos[] = await res.json()
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+  const todos: ToDos[] = await res.json();
 
   return {
     props: {
@@ -50,6 +50,7 @@ export default function Home({todos}: InferGetStaticPropsType<typeof getStaticPr
        <div className="header-background-overlay">
     <div className = "header-background-overlay shadow-2xl bg-hero-pattern bg-no-repeat bg-cover hover:bg-blend-darken sm:bg-right-top flex items-stretch min-h-screen flex-col">
    <p className = "text-white text-fivexl font-poppins font-bold  hover:text-green animate-pulse mt-4 hover:translate-y-12 w-80">Home Page</p>
+   <p className="text-black text-threexl font-poppins font-italic hover:text-red animate-bounce">Static Site Generation Demo</p>
    {todos?.length === 0 ? (
       <div>Loading....</div>
     ) : (
